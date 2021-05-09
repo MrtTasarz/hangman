@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ulitmate Hangman</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="hangman-container">
+      <svg id="hangman" width="500" height="500" style="border:2px solid black">
+        <!-- // -->
+        <line x1="25" y1="450" x2="150" y2="450" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="50" y1="450" x2="50" y2="50" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="49" y1="50" x2="235" y2="50" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="235" y1="50" x2="235" y2="150" stroke="black" stroke-width="4px" class="line hang-item" />
+        <!-- head -->
+        <circle class="hang-item circle" cx="235" cy="150" r="30" fill="red"></circle>
+        <!-- eyes -->
+        <line x1="220" x2="230" y1="140" y2="155" stroke="black" stroke-width="2px" />
+        <line x1="230" x2="220" y1="140" y2="155" stroke="black" stroke-width="2px" />
+        <line x1="245" x2="255" y1="140" y2="155" stroke="black" stroke-width="2px" />
+        <line x1="255" x2="245" y1="140" y2="155" stroke="black" stroke-width="2px" />
+        <!-- mouth -->
+        <line x1="225" x2="235" y1="170" y2="165" stroke="black" stroke-width="2px" />
+        <line x1="235" x2="245" y1="165" y2="170" stroke="black" stroke-width="2px" />
+        <!-- torso -->
+        <line x1="235" y1="180" x2="235" y2="300" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="235" y1="195" x2="210" y2="280" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="235" y1="195" x2="260" y2="280" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="235" y1="300" x2="210" y2="370" stroke="black" stroke-width="4px" class="line hang-item" />
+        <line x1="235" y1="300" x2="260" y2="370" stroke="black" stroke-width="4px" class="line hang-item" />
+      </svg>
+    </div>
+
+    <div class="right">
+      <div id="timer">
+        00:00
+      </div>
+      <!-- counter -->
+      <div class="counter">
+        <div class="player">
+          <h2>player: <span id="player">0</span></h2>
+        </div>
+        <div class="death">
+          <h2>death: <span id="death">0</span></h2>
+        </div>
+      </div>
+
+      <!-- words -->
+      <div class="word-container">
+        <div id="wrong-letters">
+
+        </div>
+        <div id="word">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
